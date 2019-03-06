@@ -1,7 +1,7 @@
 defmodule Anon.Docker.Client do
   use Tesla
 
-  alias Anon.Util.Config
+  alias Util.Config
   alias __MODULE__
 
   defstruct [
