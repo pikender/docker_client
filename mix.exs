@@ -26,7 +26,8 @@ defmodule DockerClient.MixProject do
   defp deps do
     [
       {:poison, ">= 3.1.0", override: true},
-      {:tesla, "~> 0.8.0"}
+      {:tesla, "~> 0.8.0"},
+      {:hackney, "~> 1.15.1"}
     ]
   end
 end
