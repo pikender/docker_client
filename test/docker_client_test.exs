@@ -86,7 +86,10 @@ defmodule DockerClientTest do
       env: ["POSTGRES_PASSWORD=admin123"],
       image: "launcher:0.0.1",
       labels: %{ "a" => "b" },
-      volumes: %{}
+      volumes: %{},
+      binds: [],
+      extra_hosts: [],
+      cmd: []
     }
 
     {status, reply} =

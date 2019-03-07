@@ -81,12 +81,15 @@ defmodule Anon.Docker.Client do
         "PublishAllPorts" => options[:publishallports],
         "Privileged" => options[:privileged],
         "AutoRemove" => options[:autoremove],
-        "NetworkMode" => options[:network]
+        "NetworkMode" => options[:network],
+        "Binds" => options[:binds],
+        "ExtraHosts" => options[:extra_hosts]
       },
       "Env" => options[:env],
       "Image" => options[:image],
       "Labels" => options[:labels],
-      "Volumes" => options[:volumes]
+      "Volumes" => options[:volumes],
+      "Cmd" => options[:cmd]
     }
   end
 
