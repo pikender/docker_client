@@ -83,7 +83,8 @@ defmodule Anon.Docker.Client do
         "AutoRemove" => options[:autoremove],
         "NetworkMode" => options[:network],
         "Binds" => options[:binds],
-        "ExtraHosts" => options[:extra_hosts]
+        "ExtraHosts" => options[:extra_hosts],
+        "Mounts" => options[:mounts]
       },
       "Env" => options[:env],
       "Image" => options[:image],
@@ -106,11 +107,11 @@ defmodule Anon.Docker.Client do
     |> handle_post()
   end
 
-  def container_logs(client, name) do
+  def container_logs(_client, _name) do
     get("_ping")
   end
 
-  def get_events(%Client{agent: agent} = client, since, until) do
+  def get_events(%Client{agent: _agent} = client, since, until) do
     Client.Event.get_events(client, since, until)
   end
 
